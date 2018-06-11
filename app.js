@@ -108,23 +108,24 @@ window.onload = function () {
 
                 var currentData = filteredData.filter(row => moment(row.LAUNCH, "DD/MM/YYYY").year() <= currentYear); // Filter data up until the 'current year'.
 
-                const spaceJunk = svgElement.selectAll("g") // Select all g elements.
-                    .data(currentData, function (spaceJunkRecord) { return spaceJunkRecord.id; }); // 'Join' our data to the selection.
-                spaceJunk.enter() // Specify what happens for each incoming data point.
-                        .append("g") // Append a group element for each data point.
+                const newSpaceJunk = svgElement.selectAll("g") // Select all g elements.
+                    .data(currentData, function (spaceJunkRecord) { return spaceJunkRecord.id; }) // 'Join' our data to the selection.
+                    .enter() // Specify what happens for each incoming data point.
+                    .append("g"); // Append a group element for each data point.
+                newSpaceJunk
                         .on("mouseover", hover)
                         .on("mouseout", unhover)
-                        .attr("class", function  (spaceJunkRecord) { // Set CSS clas so we can style our space junk.
+                        .attr("class", function  (spaceJunkRecord) { // Set CSS class so we can style our space junk.
                             return "junk " + spaceJunkRecord.RCS_SIZE;
                         })
                         .attr("transform", spaceJunkTranslationStart);
 
-                spaceJunk.transition() // Animate the space junk to its destination position.
+                newSpaceJunk.transition() // Animate the space junk to its destination position.
                     .duration(1000)
                     .attr("transform", spaceJunkTranslationEnd)
                     .ease(d3.easeBackOut);
 
-                spaceJunk.append("circle") // Add a circle to represent the space junk.
+                newSpaceJunk.append("circle") // Add a circle to represent the space junk.
                     .attr("r", 5) // Hard-coded circle radius.
                     .transition()
                         .attr("r", 2);
