@@ -4,4 +4,4 @@ If you're a JavaScript developer, you already know that working with data is a b
 
 This repository contains completed code for a D3 visualization of space junk covered in Chapter 13 (*Advanced visualization with D3*) of [Data Wrangling with JavaScript](http://bit.ly/2t2cJu2).
 
-Please install dependencies with bower before running. You can this using any web-sever, I recommend [live-server](https://www.npmjs.com/package/live-server).
+Please install dependencies with bower before running. You can run this example using any web-sever, I recommend [live-server](https://www.npmjs.com/package/live-server).
