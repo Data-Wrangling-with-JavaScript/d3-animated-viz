@@ -13,7 +13,7 @@ function pointOnCircle (radius, angleDegrees) { // Helper function to create a p
 window.onload = function () {
 
     var width = window.innerWidth; // Dimensions for our visualization are derived from the size of the browser window.
-    var height = window.innerHeight - 150; // Allow for heading and links.
+    var height = window.innerHeight - 200; // Allow for heading and links.
 
     var earthRadius = 6371; // This is the real radius of the earth!
     var earthTranslation = "translate(" + (width/2) + ", " + (height/2) + ")"; // Setup a translation to position the earth.
