@@ -8,6 +8,8 @@ This repository contains completed code for a D3 visualization of space junk cov
 
 Please install dependencies with bower before running. You can run this example using any web-sever, I recommend [live-server](https://www.npmjs.com/package/live-server).
 
+[You can support my work here](https://www.codecapers.com.au/about#support-my-work)
+
 ## Getting it running
 
 Clone the repo, open a command line and change directory into the repo, then...
